@@ -1,0 +1,691 @@
+```css
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+:root {
+    --bg-dark: #0b1120;
+    --bg-section: #111827;
+    --bg-card: #172033;
+
+    --primary: #00e5ff;
+    --secondary: #00ff88;
+    --blue: #2563eb;
+
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+
+    --border: rgba(0, 229, 255, 0.20);
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 56px;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(0, 229, 255, 0.08),
+            transparent 35%
+        ),
+        var(--bg-dark);
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background:
+        rgba(7, 13, 26, 0.97) !important;
+
+    border-bottom:
+        1px solid var(--border);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+
+    color: var(--primary) !important;
+
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    color: #dbeafe !important;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--secondary) !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    height: 600px;
+
+    object-fit: cover;
+
+    filter:
+        brightness(35%)
+        saturate(80%);
+}
+
+.carousel-caption {
+    bottom: 50%;
+
+    transform:
+        translateY(50%);
+}
+
+.caption-box {
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background:
+        rgba(5, 15, 30, 0.65);
+
+    border:
+        1px solid
+        rgba(0, 229, 255, 0.35);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 35px
+        rgba(0, 229, 255, 0.12);
+
+    backdrop-filter: blur(8px);
+}
+
+.caption-box h1 {
+    font-size:
+        clamp(2.2rem, 5vw, 4rem);
+
+    font-weight: 800;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 229, 255, 0.45);
+}
+
+.caption-box p {
+    font-size: 1.2rem;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.intro-text {
+    max-width: 750px;
+
+    color: var(--text-muted);
+}
+
+section {
+    background-color: transparent;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.course-card {
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #172033,
+            #0f172a
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.course-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(0, 229, 255, 0.55);
+
+    box-shadow:
+        0 15px 35px
+        rgba(247, 244, 244, 0.45),
+        0 0 20px
+        rgba(0, 229, 255, 0.10);
+}
+
+.card-icon {
+    height: 130px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: var(--primary);
+
+    font-size: 3.5rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #172554
+        );
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+.course-card .card-body {
+    padding: 1.5rem;
+}
+
+.course-card .card-title {
+    color: white;
+
+    font-weight: 700;
+}
+
+.course-card .card-text {
+    color: #ffffff !important;
+}
+
+.course-card .btn {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-primary {
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #00bcd4
+        );
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding:
+        10px 22px;
+
+    font-weight: 600;
+
+    transition:
+        all 0.3s ease;
+
+    box-shadow:
+        0 5px 15px
+        rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #00bcd4,
+            #00ff88
+        );
+
+    color: #06111f;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 229, 255, 0.30);
+}
+
+
+/* =========================
+   RUTAS
+========================= */
+
+.route-card {
+    background:
+        linear-gradient(
+            145deg,
+            #172033,
+            #0f172a
+        );
+
+    padding:
+        35px 20px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        var(--shadow);
+
+    height: 100%;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.route-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(0, 255, 136, 0.5);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.45),
+        0 0 20px
+        rgba(0, 255, 136, 0.08);
+}
+
+.route-card i {
+    font-size: 3rem;
+
+    color: var(--secondary);
+
+    text-shadow:
+        0 0 12px
+        rgba(0, 255, 136, 0.35);
+}
+
+.route-card h3 {
+    margin-top: 20px;
+
+    font-size: 1.3rem;
+
+    color: white;
+}
+
+.route-card p {
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   COMUNIDAD
+========================= */
+
+.community-section {
+    background:
+        linear-gradient(
+            135deg,
+            #071426,
+            #0b3150,
+            #071426
+        );
+
+    border-top:
+        1px solid
+        var(--border);
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+.community-icon {
+    font-size: 4rem;
+
+    color: var(--primary);
+
+    text-shadow:
+        0 0 20px
+        rgba(0, 229, 255, 0.5);
+
+    animation:
+        communityPulse 2.5s
+        infinite;
+}
+
+@keyframes communityPulse {
+
+    0% {
+        transform: scale(1);
+
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: scale(1.08);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+
+        opacity: 0.85;
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background:
+        #050b16 !important;
+
+    border-top:
+        1px solid
+        var(--border);
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color:
+        #94a3b8;
+
+    text-decoration: none;
+
+    transition:
+        all 0.2s ease;
+}
+
+.footer-links a:hover {
+    color:
+        var(--primary);
+
+    padding-left: 5px;
+}
+
+
+/* =========================
+   REDES SOCIALES
+========================= */
+
+.social-links {
+    display: flex;
+
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background:
+        #111827;
+
+    border:
+        1px solid
+        rgba(0, 229, 255, 0.25);
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transition:
+        all 0.3s ease;
+}
+
+.social-links a:hover {
+    color:
+        #06111f;
+
+    background:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 0 18px
+        rgba(0, 229, 255, 0.4);
+}
+
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+#newsletterForm .form-control {
+    background:
+        #111827;
+
+    color:
+        white;
+
+    border:
+        1px solid
+        rgba(0, 229, 255, 0.2);
+
+    border-radius:
+        8px;
+
+    padding:
+        11px 14px;
+}
+
+#newsletterForm .form-control::placeholder {
+    color:
+        #64748b;
+}
+
+#newsletterForm .form-control:focus {
+    background:
+        #111827;
+
+    color:
+        white;
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 0.2rem
+        rgba(0, 229, 255, 0.12);
+}
+
+#newsletterForm .invalid-feedback {
+    display: none;
+}
+
+#newsletterForm
+.form-control.is-invalid
++ .invalid-feedback {
+    display: block;
+}
+
+
+/* =========================
+   TÍTULOS DE SECCIONES
+========================= */
+
+section h2 {
+    color: white;
+
+    font-weight: 800;
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    margin-top: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   SELECCIÓN DE TEXTO
+========================= */
+
+::selection {
+    background:
+        var(--primary);
+
+    color:
+        #06111f;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #050b16;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            var(--primary),
+            var(--secondary)
+        );
+
+    border-radius:
+        10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .carousel-item,
+    .carousel-item img {
+        height: 500px;
+    }
+
+    .carousel-caption {
+        padding:
+            0 30px;
+    }
+
+    .caption-box {
+        padding:
+            25px 20px;
+    }
+
+    .caption-box p {
+        font-size:
+            1rem;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .carousel-item,
+    .carousel-item img {
+        height: 450px;
+    }
+
+    .caption-box {
+        padding:
+            20px 15px;
+    }
+
+    .caption-box h1 {
+        font-size:
+            2rem;
+    }
+
+    .caption-box p {
+        font-size:
+            0.95rem;
+    }
+
+}
+```
+
